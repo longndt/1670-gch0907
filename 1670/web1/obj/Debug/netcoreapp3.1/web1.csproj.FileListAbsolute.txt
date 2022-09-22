@@ -353,3 +353,5 @@ D:\workspace\1670-gch0907\1670\web1\obj\Debug\netcoreapp3.1\web1.genruntimeconfi
 D:\workspace\1670-gch0907\1670\web1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Demo.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web1\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Index.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web1\obj\Debug\netcoreapp3.1\Razor\Views\Demo\ApplicationDevelopment.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web1\obj\Debug\netcoreapp3.1\Razor\Views\Net\Index.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web1\obj\Debug\netcoreapp3.1\Razor\Views\Net\Razor.cshtml.g.cs
