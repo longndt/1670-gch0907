@@ -6,7 +6,6 @@ namespace web3.Controllers
 {
     public class StudentController : Controller
     {
-        [Route("/")]
         public IActionResult StudentInfo()
         {
             //tạo object Student từ model Student

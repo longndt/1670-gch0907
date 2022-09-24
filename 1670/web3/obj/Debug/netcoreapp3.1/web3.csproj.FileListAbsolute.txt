@@ -352,3 +352,8 @@ D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\web3.Views.pdb
 D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\web3.csproj.CopyComplete
 D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\web3.genruntimeconfig.cache
 D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\Razor\Views\Student\StudentList.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\Razor\Views\Home\Razor.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\AdminLayout.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\UserLayout.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web3\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
