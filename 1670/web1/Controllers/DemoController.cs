@@ -11,6 +11,7 @@ namespace web1.Controllers
         [Route("/demo")]
         public IActionResult Index()
         {
+            var x = 5;
             return View();
         }
 
@@ -19,6 +20,9 @@ namespace web1.Controllers
         public IActionResult ApplicationDevelopment()
         {
             return View();
+
+            
+         
         }
 
         public IActionResult Demo()
