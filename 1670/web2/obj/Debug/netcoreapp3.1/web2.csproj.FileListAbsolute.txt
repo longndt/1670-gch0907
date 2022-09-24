@@ -352,3 +352,5 @@ D:\workspace\1670-gch0907\1670\web2\obj\Debug\netcoreapp3.1\web2.genruntimeconfi
 D:\workspace\1670-gch0907\1670\web2\obj\Debug\netcoreapp3.1\Razor\Views\Greenwich\HN.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web2\obj\Debug\netcoreapp3.1\Razor\Views\Test\CanTho.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web2\obj\Debug\netcoreapp3.1\Razor\Views\Test\DaNang.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web2\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Demo.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web2\obj\Debug\netcoreapp3.1\Razor\Views\Demo\PassData.cshtml.g.cs
