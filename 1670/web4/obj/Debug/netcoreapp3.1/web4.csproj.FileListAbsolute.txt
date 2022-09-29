@@ -337,7 +337,6 @@ D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\web4.TagHelpers.inpu
 D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\web4.TagHelpers.output.cache
 D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\web4.RazorCoreGenerate.cache
 D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\Razor\Views\Laptop\Index.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web4\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
