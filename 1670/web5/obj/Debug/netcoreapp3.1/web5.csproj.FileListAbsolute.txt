@@ -354,3 +354,5 @@ D:\workspace\1670-gch0907\1670\web5\obj\Debug\netcoreapp3.1\web5.pdb
 D:\workspace\1670-gch0907\1670\web5\obj\Debug\netcoreapp3.1\web5.genruntimeconfig.cache
 D:\workspace\1670-gch0907\1670\web5\obj\Debug\netcoreapp3.1\Razor\Views\Login\Check.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web5\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web5\obj\Debug\netcoreapp3.1\Razor\Views\University\Index.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web5\obj\Debug\netcoreapp3.1\Razor\Views\University\Result.cshtml.g.cs

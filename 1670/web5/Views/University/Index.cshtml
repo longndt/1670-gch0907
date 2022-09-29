@@ -1,0 +1,15 @@
+﻿@model web5.Models.University
+
+<form asp-controller="University" asp-action="Index">
+    English Name :
+    <input asp-for="EngName" required /><br /><br />
+    Vietnamese Name :
+    <input asp-for="VieName" required /><br /><br />
+    Address :
+    <input asp-for="Address" required /><br /><br />
+    Introduction :
+    <input asp-for="Intro" required /><br /><br />
+    Image :
+    <input asp-for="Image" required /><br /><br />
+    <input type="submit" value="OK" />
+</form>
