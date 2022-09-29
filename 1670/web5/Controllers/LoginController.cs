@@ -11,15 +11,15 @@ namespace web5.Controllers
 
         public IActionResult Check(string username, string password)
         {
-            //ViewBag.Username = username;
-            //ViewBag.Password = password;
-            if (username == "admin" && password == "123456")
-            {
-                ViewBag.Result = true;
-            } else
-            {
-                ViewBag.Result = false;
-            }
+            ViewBag.Username = username;
+            ViewBag.Password = password;
+            //if (username == "admin" && password == "123456")
+            //{
+            //    ViewBag.Result = true;
+            //} else
+            //{
+            //    ViewBag.Result = false;
+            //}
             return View();
         }
     }
