@@ -55,9 +55,10 @@ namespace web6.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Person person, int id)
+        public IActionResult Edit(Person newPerson, int id)
         {
-            persons[id] = person;
+            var currentPerson = persons[id];
+            currentPerson = newPerson;
             return RedirectToAction("Index", persons);
         }
     }
