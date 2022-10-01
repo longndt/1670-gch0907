@@ -336,10 +336,7 @@ D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\staticwebassets\web6
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.TagHelpers.input.cache
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.TagHelpers.output.cache
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.RazorCoreGenerate.cache
-D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Person\Add.cshtml.g.cs
-D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -352,3 +349,4 @@ D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.csproj.CopyComp
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.dll
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.pdb
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.genruntimeconfig.cache
+D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs

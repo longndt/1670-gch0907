@@ -10,6 +10,7 @@ namespace web6.Controllers
         public static List<Person> persons = new List<Person>();
 
         //hiển thị toàn bộ dữ liệu từ List
+        [Route("/")]
         public IActionResult Index()
         {
             return View(persons);
@@ -17,6 +18,7 @@ namespace web6.Controllers
 
         //add dữ liệu từ form (2 action):
         //1 action GET để render ra view form nhập liệu
+   
         [HttpGet]
         public IActionResult Add()
         {
@@ -31,10 +33,30 @@ namespace web6.Controllers
             persons.Add(person);
             //render ra trang index chứa list các Person
             //Cách 1 (return View): giữ nguyên đường dẫn + duplicate add nếu bấm F5 (Refresh)
-            //return View("Index", persons);
+            //return View("List", persons);
             //Cách 2 (RedirectToAction): thay đổi đường dẫn + không bị duplicate add khi bấm F5
             //(recommended)
             return RedirectToAction("Index",persons);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            persons.RemoveAt(id);
+            return RedirectToAction("Index", persons);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var person = persons[id];
+            return View(person);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Person person)
+        {
+            return RedirectToAction("Index", persons);
         }
     }
 }
