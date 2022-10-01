@@ -57,6 +57,7 @@ namespace web6.Controllers
         [HttpPost]
         public IActionResult Edit(Person newPerson, int id)
         {
+            //override giá trị của object cũ bằng giá trị của object mới được nhập từ form
             var currentPerson = persons[id];
             currentPerson = newPerson;
             return RedirectToAction("Index", persons);
