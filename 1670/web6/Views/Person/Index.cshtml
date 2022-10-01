@@ -31,7 +31,7 @@
                  <img src="@person.Image" width="100" height="100" />
              </td>
              <td>
-                  <form asp-controller="Person" asp-action="Edit">
+                  <form method="get" asp-controller="Person" asp-action="Edit">
                      <input type="hidden" name="id" value="@Model.IndexOf(person)">
                      <input class="btn btn-warning" type="submit" value="EDIT">
                  </form>

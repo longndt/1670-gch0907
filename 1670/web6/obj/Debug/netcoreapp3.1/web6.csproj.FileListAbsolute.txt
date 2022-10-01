@@ -350,3 +350,4 @@ D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.dll
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.pdb
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\web6.genruntimeconfig.cache
 D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs
+D:\workspace\1670-gch0907\1670\web6\obj\Debug\netcoreapp3.1\Razor\Views\Person\Edit.cshtml.g.cs

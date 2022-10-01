@@ -50,12 +50,14 @@ namespace web6.Controllers
         public IActionResult Edit(int id)
         {
             var person = persons[id];
+            ViewBag.Id = id;
             return View(person);
         }
 
         [HttpPost]
-        public IActionResult Edit(Person person)
+        public IActionResult Edit(Person person, int id)
         {
+            persons[id] = person;
             return RedirectToAction("Index", persons);
         }
     }
