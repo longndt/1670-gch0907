@@ -39,7 +39,9 @@
              <td>
                  <form method="post" asp-controller="Person" asp-action="Delete">
                      <input type="hidden" name="id" value="@Model.IndexOf(person)">
-                     <input class="btn btn-danger" type="submit" value="DELETE">
+                     <input class="btn btn-danger" type="submit" value="DELETE"
+                     onclick="return confirm('Are you sure to delete this person ?');"
+                     >
                  </form>
              </td>
          </tr>   
