@@ -1,0 +1,9 @@
+﻿@model web6.Models.Person
+
+<form method="post" asp-controller="Person" asp-action="Add">
+    Name: <input asp-for="Name" required /><br /><br />
+    Age: <input asp-for="Age" required/><br /><br />
+    Mobile: <input asp-for="Mobile" required /><br /><br />
+    Image: <input asp-for="Image" required/><br /><br />
+    <input type="submit" value="Add">
+</form> 

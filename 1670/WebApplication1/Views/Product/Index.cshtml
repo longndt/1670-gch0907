@@ -1,0 +1,8 @@
+﻿@model ICollection<Product>
+
+<ol>
+@foreach (var product in Model)
+{
+        <ul>Name: @product.Name + Price: @product.Price + Quantity: @product.Quantity</ul>
+}
+</ol>

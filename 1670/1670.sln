@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web1", "web1\web1.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web2", "web2\web2.csproj", "{3A3E43DD-ED48-448A-AB12-ED87B9E767D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web4", "web4\web4.csproj", "{D39318A3-4726-40F5-8FFD-F7A2E11DCA48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web4", "web4\web4.csproj", "{D39318A3-4726-40F5-8FFD-F7A2E11DCA48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web5", "web5\web5.csproj", "{C6D5975B-1178-4E2F-ABC9-43315AF5812B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web5", "web5\web5.csproj", "{C6D5975B-1178-4E2F-ABC9-43315AF5812B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web6", "web6\web6.csproj", "{719A426C-AE74-4A90-B7FF-56E8B2E38669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C6D5975B-1178-4E2F-ABC9-43315AF5812B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6D5975B-1178-4E2F-ABC9-43315AF5812B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6D5975B-1178-4E2F-ABC9-43315AF5812B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719A426C-AE74-4A90-B7FF-56E8B2E38669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719A426C-AE74-4A90-B7FF-56E8B2E38669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719A426C-AE74-4A90-B7FF-56E8B2E38669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719A426C-AE74-4A90-B7FF-56E8B2E38669}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
