@@ -50,6 +50,7 @@ namespace web6.Controllers
         public IActionResult Edit(int id)
         {
             var person = persons[id];
+            //pass id của object person cần edit sang View
             ViewBag.Id = id;
             return View(person);
         }
