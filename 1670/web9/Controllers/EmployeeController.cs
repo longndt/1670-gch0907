@@ -14,7 +14,8 @@ namespace web9.Controllers
 
         //nhận và xử lý dữ liệu từ form
         [HttpPost]
-        public IActionResult Create(Employee emp)
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([Bind("Name, Age, Email, Image, Mobile")] Employee emp)
         {
             //check xem dữ liệu nhập vào có hợp lệ hay không
             //hợp lệ: có thỏa mãn các yêu cầu khai báo ở Model hay không
