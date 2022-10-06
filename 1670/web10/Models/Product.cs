@@ -22,5 +22,7 @@ namespace web10.Models
         [MinLength(10)]
         public string Image { get; set; }
 
+        [Required]
+        public string Color { get; set; }
     }
 }

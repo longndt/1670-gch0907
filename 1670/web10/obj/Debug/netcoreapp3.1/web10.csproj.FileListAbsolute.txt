@@ -387,3 +387,4 @@ D:\workspace\FGW-1670\1670-gch0907\1670\web10\obj\Debug\netcoreapp3.1\web10.dll
 D:\workspace\FGW-1670\1670-gch0907\1670\web10\obj\Debug\netcoreapp3.1\web10.pdb
 D:\workspace\FGW-1670\1670-gch0907\1670\web10\obj\Debug\netcoreapp3.1\web10.genruntimeconfig.cache
 D:\workspace\FGW-1670\1670-gch0907\1670\web10\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+D:\workspace\FGW-1670\1670-gch0907\1670\web10\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
