@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pLrC0NozaJittEjh2fnp0qT9445hZObL6+4hWhDsdUheVegPis/v1tCrTT2IuDDx1LTySACoh2yHLas0lMy8YA==",
+  "dgSpecHash": "VaKX+2t8tR2PS5hWxlbBgcpJBCVv96Ynb0ggLZ52n2X/k4EDqixcCMJWj3ssdsz+ThJ9+gwZVwj8KDJx/VYAEA==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\1670-gch0907\\1670\\web6\\web6.csproj",
+  "projectFilePath": "D:\\workspace\\FGW-1670\\1670-gch0907\\1670\\web6\\web6.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GRAM\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\GRAM\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.28\\microsoft.aspnetcore.mvc.razor.extensions.3.1.28.nupkg.sha512",

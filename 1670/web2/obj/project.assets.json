@@ -744,11 +744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\1670-gch0907\\1670\\web2\\web2.csproj",
+      "projectUniqueName": "D:\\workspace\\FGW-1670\\1670-gch0907\\1670\\web2\\web2.csproj",
       "projectName": "web2",
-      "projectPath": "D:\\workspace\\1670-gch0907\\1670\\web2\\web2.csproj",
+      "projectPath": "D:\\workspace\\FGW-1670\\1670-gch0907\\1670\\web2\\web2.csproj",
       "packagesPath": "C:\\Users\\GRAM\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\1670-gch0907\\1670\\web2\\obj\\",
+      "outputPath": "D:\\workspace\\FGW-1670\\1670-gch0907\\1670\\web2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

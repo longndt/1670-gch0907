@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web5", "web5\web5.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web6", "web6\web6.csproj", "{719A426C-AE74-4A90-B7FF-56E8B2E38669}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web7", "web7\web7.csproj", "{6A6EA5D1-C8BC-4C38-999E-7F91F71DE038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web7", "web7\web7.csproj", "{6A6EA5D1-C8BC-4C38-999E-7F91F71DE038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web8", "web8\web8.csproj", "{46924F15-AB04-4F4E-9810-12300D086328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{6A6EA5D1-C8BC-4C38-999E-7F91F71DE038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A6EA5D1-C8BC-4C38-999E-7F91F71DE038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A6EA5D1-C8BC-4C38-999E-7F91F71DE038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46924F15-AB04-4F4E-9810-12300D086328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46924F15-AB04-4F4E-9810-12300D086328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46924F15-AB04-4F4E-9810-12300D086328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46924F15-AB04-4F4E-9810-12300D086328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
