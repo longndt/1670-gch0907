@@ -1,4 +1,5 @@
 ﻿using demo.Data;
+using demo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -46,5 +47,19 @@ namespace demo.Controllers
             var student = context.Students.Find(id);
             return View(student);
         }
+
+        [HttpGet]
+        public IActionResult Add ()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Student student)
+        {
+            context.Students.Add(student);
+            context.SaveChanges();
+            return RedirectToAction("index");
+        } 
     }
 }

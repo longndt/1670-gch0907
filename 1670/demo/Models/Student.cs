@@ -38,10 +38,10 @@ namespace demo.Models
         public bool IsGraduated { get; set; }
 
         [Required]
-        [MinLength(1), MaxLength(1)]
         public char Gender { get; set; }
 
         [Required]
+        [Display(Name = "Avatar")]
         public string Image { get; set; }
     }
 }

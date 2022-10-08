@@ -390,3 +390,4 @@ D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\List.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Home\SayHello.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\Detail.cshtml.g.cs
+D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\Add.cshtml.g.cs
