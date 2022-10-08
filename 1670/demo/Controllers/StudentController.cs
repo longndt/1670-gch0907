@@ -36,7 +36,8 @@ namespace demo.Controllers
                 //lưu lại thay đổi trong db
                 context.SaveChanges();
                 //quay trở lại trang index sau khi thành công
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
         }
     }
