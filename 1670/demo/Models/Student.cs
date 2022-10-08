@@ -40,5 +40,8 @@ namespace demo.Models
         [Required]
         [MinLength(1), MaxLength(1)]
         public char Gender { get; set; }
+
+        [Required]
+        public string Image { get; set; }
     }
 }
