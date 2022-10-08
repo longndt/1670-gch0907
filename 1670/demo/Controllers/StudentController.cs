@@ -16,6 +16,7 @@ namespace demo.Controllers
             this.context = context;
         }
 
+        [Route("/")]
         public IActionResult Index()
         {
             return View(context.Students.ToList());
@@ -36,6 +37,11 @@ namespace demo.Controllers
                 context.Students.Remove(student);
                 //lưu lại thay đổi trong db
                 context.SaveChanges();
+
+                //gửi thông báo về trang Index
+                //bắt buộc dùng TempData để có thể gửi dữ liệu về View nếu return RedirectToAction
+                TempData["Message"] = "Delete student successfully !";
+
                 //quay trở lại trang index sau khi thành công
                 //return RedirectToAction("Index");
                 return RedirectToAction(nameof(Index));
@@ -61,12 +67,35 @@ namespace demo.Controllers
             {
                 context.Students.Add(student);
                 context.SaveChanges();
+                TempData["Message"] = "Add student successfully !";
                 return RedirectToAction("index");
             }
             else
             {
                 return View(student);
             }
-        } 
+        }
+
+        [HttpGet]
+        public IActionResult Edit (int id)
+        {
+            return View(context.Students.Find(id));
+        }
+
+        [HttpPost]
+        public IActionResult Edit (Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Students.Update(student);
+                context.SaveChanges();
+                TempData["Message"] = "Edit student successfully !";
+                return RedirectToAction("index");
+            }
+            else
+            {
+                return View(student);
+            }
+        }
     }
 }
