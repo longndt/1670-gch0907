@@ -57,9 +57,16 @@ namespace demo.Controllers
         [HttpPost]
         public IActionResult Add(Student student)
         {
-            context.Students.Add(student);
-            context.SaveChanges();
-            return RedirectToAction("index");
+            if (ModelState.IsValid)
+            {
+                context.Students.Add(student);
+                context.SaveChanges();
+                return RedirectToAction("index");
+            }
+            else
+            {
+                return View(student);
+            }
         } 
     }
 }
