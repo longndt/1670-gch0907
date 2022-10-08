@@ -40,5 +40,11 @@ namespace demo.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+
+        public IActionResult Detail(int id)
+        {
+            var student = context.Students.Find(id);
+            return View(student);
+        }
     }
 }

@@ -33,5 +33,12 @@ namespace demo.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        public IActionResult SayHello(string a, string b)
+        {
+            ViewBag.Name = "Welcome " + a + " and " + b + " to Greenwich University";
+            return View();
+        }
     }
 }
