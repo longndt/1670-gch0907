@@ -47,24 +47,18 @@ namespace demo.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Students",
+                name: "Universities",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SId = table.Column<string>(maxLength: 8, nullable: true),
-                    Name = table.Column<string>(maxLength: 30, nullable: true),
-                    Birthday = table.Column<DateTime>(nullable: false),
-                    Email = table.Column<string>(nullable: false),
-                    Mobile = table.Column<string>(maxLength: 10, nullable: true),
-                    Grade = table.Column<double>(nullable: false),
-                    IsGraduated = table.Column<bool>(nullable: false),
-                    Gender = table.Column<string>(nullable: false),
-                    Image = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false),
+                    Address = table.Column<string>(nullable: false),
+                    Logo = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Students", x => x.Id);
+                    table.PrimaryKey("PK_Universities", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -173,20 +167,58 @@ namespace demo.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Students",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SId = table.Column<string>(maxLength: 8, nullable: true),
+                    Name = table.Column<string>(maxLength: 30, nullable: true),
+                    Birthday = table.Column<DateTime>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Mobile = table.Column<string>(maxLength: 10, nullable: true),
+                    Grade = table.Column<double>(nullable: false),
+                    IsGraduated = table.Column<bool>(nullable: false),
+                    Gender = table.Column<string>(nullable: false),
+                    Image = table.Column<string>(nullable: false),
+                    UniversityId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Students", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Students_Universities_UniversityId",
+                        column: x => x.UniversityId,
+                        principalTable: "Universities",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
-                table: "Students",
-                columns: new[] { "Id", "Birthday", "Email", "Gender", "Grade", "Image", "IsGraduated", "Mobile", "Name", "SId" },
-                values: new object[] { 1, new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "nam@gmail.com", "M", 7.7999999999999998, "https://d2jyir0m79gs60.cloudfront.net/news/images/successful-college-student-lg.png", true, "0912345678", "Nam", "GCH12345" });
+                table: "Universities",
+                columns: new[] { "Id", "Address", "Logo", "Name" },
+                values: new object[] { 10, "Pham Van Bach", "https://career.fpt.edu.vn/Content/images/logo_unit/2017-Greenwich-Eng-01.png", "Greenwich" });
+
+            migrationBuilder.InsertData(
+                table: "Universities",
+                columns: new[] { "Id", "Address", "Logo", "Name" },
+                values: new object[] { 30, "Duy Tan", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz0i0yB35olWXOJ31vj9z53-VQY0U6cpk4GRhIbOZ21Wbw3UIyWyDZeMQKd2flQHeVxyQ&usqp=CAU", "Swinburne" });
 
             migrationBuilder.InsertData(
                 table: "Students",
-                columns: new[] { "Id", "Birthday", "Email", "Gender", "Grade", "Image", "IsGraduated", "Mobile", "Name", "SId" },
-                values: new object[] { 2, new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "nam@gmail.com", "F", 7.7999999999999998, "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/EDUCMS/tz7n-7vqceaq86dprdnzag.jpg", true, "0912345678", "Huong", "GCH12345" });
+                columns: new[] { "Id", "Birthday", "Email", "Gender", "Grade", "Image", "IsGraduated", "Mobile", "Name", "SId", "UniversityId" },
+                values: new object[] { 1, new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "nam@gmail.com", "M", 7.7999999999999998, "https://d2jyir0m79gs60.cloudfront.net/news/images/successful-college-student-lg.png", true, "0912345678", "Nam", "GCH12345", 10 });
 
             migrationBuilder.InsertData(
                 table: "Students",
-                columns: new[] { "Id", "Birthday", "Email", "Gender", "Grade", "Image", "IsGraduated", "Mobile", "Name", "SId" },
-                values: new object[] { 3, new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "nam@gmail.com", "M", 7.7999999999999998, "https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000", true, "0912345678", "Minh", "GCH12345" });
+                columns: new[] { "Id", "Birthday", "Email", "Gender", "Grade", "Image", "IsGraduated", "Mobile", "Name", "SId", "UniversityId" },
+                values: new object[] { 3, new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "nam@gmail.com", "M", 7.7999999999999998, "https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000", true, "0912345678", "Minh", "GCH12345", 10 });
+
+            migrationBuilder.InsertData(
+                table: "Students",
+                columns: new[] { "Id", "Birthday", "Email", "Gender", "Grade", "Image", "IsGraduated", "Mobile", "Name", "SId", "UniversityId" },
+                values: new object[] { 2, new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "nam@gmail.com", "F", 7.7999999999999998, "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/EDUCMS/tz7n-7vqceaq86dprdnzag.jpg", true, "0912345678", "Huong", "GCH12345", 30 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -226,6 +258,11 @@ namespace demo.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Students_UniversityId",
+                table: "Students",
+                column: "UniversityId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -253,6 +290,9 @@ namespace demo.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Universities");
         }
     }
 }

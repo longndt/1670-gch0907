@@ -10,7 +10,7 @@ using demo.Data;
 namespace demo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221013015626_demo")]
+    [Migration("20221013030543_demo")]
     partial class demo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -261,7 +261,12 @@ namespace demo.Migrations
                         .HasColumnType("nvarchar(8)")
                         .HasMaxLength(8);
 
+                    b.Property<int>("UniversityId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UniversityId");
 
                     b.ToTable("Students");
 
@@ -277,7 +282,8 @@ namespace demo.Migrations
                             IsGraduated = true,
                             Mobile = "0912345678",
                             Name = "Nam",
-                            SId = "GCH12345"
+                            SId = "GCH12345",
+                            UniversityId = 10
                         },
                         new
                         {
@@ -290,7 +296,8 @@ namespace demo.Migrations
                             IsGraduated = true,
                             Mobile = "0912345678",
                             Name = "Huong",
-                            SId = "GCH12345"
+                            SId = "GCH12345",
+                            UniversityId = 30
                         },
                         new
                         {
@@ -303,7 +310,48 @@ namespace demo.Migrations
                             IsGraduated = true,
                             Mobile = "0912345678",
                             Name = "Minh",
-                            SId = "GCH12345"
+                            SId = "GCH12345",
+                            UniversityId = 10
+                        });
+                });
+
+            modelBuilder.Entity("demo.Models.University", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Universities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 10,
+                            Address = "Pham Van Bach",
+                            Logo = "https://career.fpt.edu.vn/Content/images/logo_unit/2017-Greenwich-Eng-01.png",
+                            Name = "Greenwich"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Address = "Duy Tan",
+                            Logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz0i0yB35olWXOJ31vj9z53-VQY0U6cpk4GRhIbOZ21Wbw3UIyWyDZeMQKd2flQHeVxyQ&usqp=CAU",
+                            Name = "Swinburne"
                         });
                 });
 
@@ -354,6 +402,15 @@ namespace demo.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("demo.Models.Student", b =>
+                {
+                    b.HasOne("demo.Models.University", "University")
+                        .WithMany("Students")
+                        .HasForeignKey("UniversityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

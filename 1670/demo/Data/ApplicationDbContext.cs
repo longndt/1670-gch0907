@@ -19,12 +19,40 @@ namespace demo.Data
         //Student: tên của Model (design của bảng)
         //Students: tên của bảng & tên của DbSet (collection) được gọi đến trong Controller
         public DbSet<Student> Students { get; set; }
+        public DbSet<University> Universities { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
+            //Note: add dữ liệu cho bảng chứa PK trước (University)
+            //rồi add dữ liệu cho bảng chứa FK sau (Student)
+
+            //add dữ liệu khởi tạo cho bảng University
+            PopulateUniversity(builder);
+
+            //add dữ liệu khởi tạo (initial data) cho bảng Student
+            SeedStudent(builder);          
+        }
+
+        private void PopulateUniversity(ModelBuilder builder)
+        {
+            var greenwich = new University { Id = 10, Name = "Greenwich", Address = "Pham Van Bach", 
+                Logo = "https://career.fpt.edu.vn/Content/images/logo_unit/2017-Greenwich-Eng-01.png"
+            };
+            var swinburne = new University
+            {
+                Id = 30,
+                Name = "Swinburne",
+                Address = "Duy Tan",
+                Logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz0i0yB35olWXOJ31vj9z53-VQY0U6cpk4GRhIbOZ21Wbw3UIyWyDZeMQKd2flQHeVxyQ&usqp=CAU"
+            };
+            builder.Entity<University>().HasData(greenwich, swinburne);
+        }
+
+        private void SeedStudent (ModelBuilder builder)
+        {
             //add dữ liệu tự động vào DB bằng code
             builder.Entity<Student>().HasData(
                 //bắt buộc phải nhập giá trị cho cột Id (PK)
@@ -32,7 +60,8 @@ namespace demo.Data
                 //còn lại không bắt buộc. Thứ tự khai báo các thuộc tính không quan trọng
                 new Student
                 {
-                    Id = 1, //Id bắt buộc phải khác nhau
+                    Id = 1, //Id không cần phải bắt đầu từ 1 (gõ tùy ý nhưng giá trị phải khác nhau)
+                    UniversityId = 10, //UniversityId phải tồn tại ở trong bảng University
                     Name = "Nam",
                     Mobile = "0912345678",
                     Email = "nam@gmail.com",
@@ -45,7 +74,8 @@ namespace demo.Data
                 },
                 new Student
                 {
-                    Id = 2, 
+                    Id = 2,
+                    UniversityId = 30,
                     Name = "Huong",
                     Mobile = "0912345678",
                     Email = "nam@gmail.com",
@@ -59,6 +89,7 @@ namespace demo.Data
                 new Student
                 {
                     Id = 3,
+                    UniversityId = 10,
                     Name = "Minh",
                     Mobile = "0912345678",
                     Email = "nam@gmail.com",
