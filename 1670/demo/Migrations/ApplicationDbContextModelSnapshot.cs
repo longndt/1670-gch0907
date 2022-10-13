@@ -235,8 +235,7 @@ namespace demo.Migrations
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1)")
-                        .HasMaxLength(1);
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<double>("Grade")
                         .HasColumnType("float");
@@ -263,6 +262,47 @@ namespace demo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Students");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://d2jyir0m79gs60.cloudfront.net/news/images/successful-college-student-lg.png",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Nam",
+                            SId = "GCH12345"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "F",
+                            Grade = 7.7999999999999998,
+                            Image = "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/EDUCMS/tz7n-7vqceaq86dprdnzag.jpg",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Huong",
+                            SId = "GCH12345"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Minh",
+                            SId = "GCH12345"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
