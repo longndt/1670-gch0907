@@ -1,6 +1,8 @@
 ﻿using demo.Data;
 using demo.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace demo.Controllers
@@ -50,7 +52,9 @@ namespace demo.Controllers
 
         public IActionResult Detail(int id)
         {
-            var student = context.Students.Find(id);
+            var student = context.Students
+                                 .Include(s => s.University)
+                                 .FirstOrDefault(s => s.Id == id);
             return View(student);
         }
 
