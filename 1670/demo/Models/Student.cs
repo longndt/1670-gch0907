@@ -47,6 +47,7 @@ namespace demo.Models
 
         //Foreign Key (kết nối đến cột Id - PK của bảng University)
         //Note: chỉ sử dụng để kết nối 2 bảng trong DB
+        [Required]
         public int UniversityId { get; set; }
 
         //tạo object để sử dụng trong code

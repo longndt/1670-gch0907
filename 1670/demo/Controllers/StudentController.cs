@@ -24,6 +24,12 @@ namespace demo.Controllers
             return View(context.Students.ToList());
         }
 
+        public IActionResult List()
+        {
+            return View(context.Students.ToList());
+        }
+
+        [Authorize(Roles = "Administrator")]
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -61,6 +67,10 @@ namespace demo.Controllers
         [HttpGet]
         public IActionResult Add ()
         {
+            //lấy ra dữ liệu từ bảng University và lưu vào list
+            var universities = context.Universities.ToList();
+            //dữ liệu đẩy vào ViewBag để gọi đến trong View
+            ViewBag.Universities = universities;
             return View();
         }
 
@@ -76,6 +86,7 @@ namespace demo.Controllers
             }
             else
             {
+                ViewBag.Universities = context.Universities.ToList();
                 return View(student);
             }
         }
@@ -83,6 +94,10 @@ namespace demo.Controllers
         [HttpGet]
         public IActionResult Edit (int id)
         {
+            //lấy ra dữ liệu từ bảng University và lưu vào list
+            var universities = context.Universities.ToList();
+            //dữ liệu đẩy vào ViewBag để gọi đến trong View
+            ViewBag.Universities = universities;
             return View(context.Students.Find(id));
         }
 
@@ -98,6 +113,7 @@ namespace demo.Controllers
             }
             else
             {
+                ViewBag.Universities = context.Universities.ToList();
                 return View(student);
             }
         }

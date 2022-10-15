@@ -44,6 +44,22 @@ namespace demo.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "A",
+                            ConcurrencyStamp = "ec5ad35d-7e40-4712-8bc3-1fdcdb0ca89a",
+                            Name = "Administrator",
+                            NormalizedName = "Administrator"
+                        },
+                        new
+                        {
+                            Id = "B",
+                            ConcurrencyStamp = "a095cdea-075f-43fa-8b4e-3d842317af0b",
+                            Name = "Customer",
+                            NormalizedName = "Customer"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -133,6 +149,38 @@ namespace demo.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "f22db82d-24c6-4daf-8af2-58158143b028",
+                            Email = "admin@fpt.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "admin@fpt.com",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL6sXxfweP+5YcPvwzrQ649CF6HXphFZwv1lPJwWDSG1Qp11+2oStJGj2nI2znkflw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "b05f704a-4996-4468-a3d2-ce21b4aef09f",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@fpt.com"
+                        },
+                        new
+                        {
+                            Id = "2",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "8aa64c25-8fb9-4093-b12e-cb790252831d",
+                            Email = "customer@fpt.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "customer@fpt.com",
+                            PasswordHash = "AQAAAAEAACcQAAAAECNV8jLtQFw1K2Afkn93VDyNU5LCK/7KInSBGolkNE4WMmL+6qS0GjdEiH7/WwpX0A==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "372ed582-e302-4b1d-aa63-176148058639",
+                            TwoFactorEnabled = false,
+                            UserName = "customer@fpt.com"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -196,6 +244,18 @@ namespace demo.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "1",
+                            RoleId = "A"
+                        },
+                        new
+                        {
+                            UserId = "2",
+                            RoleId = "B"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -310,6 +370,90 @@ namespace demo.Migrations
                             Name = "Minh",
                             SId = "GCH12345",
                             UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://d2jyir0m79gs60.cloudfront.net/news/images/successful-college-student-lg.png",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Nam",
+                            SId = "GCH12345",
+                            UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "F",
+                            Grade = 7.7999999999999998,
+                            Image = "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/EDUCMS/tz7n-7vqceaq86dprdnzag.jpg",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Huong",
+                            SId = "GCH12345",
+                            UniversityId = 30
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Minh",
+                            SId = "GCH12345",
+                            UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://d2jyir0m79gs60.cloudfront.net/news/images/successful-college-student-lg.png",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Nam",
+                            SId = "GCH12345",
+                            UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "F",
+                            Grade = 7.7999999999999998,
+                            Image = "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/EDUCMS/tz7n-7vqceaq86dprdnzag.jpg",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Huong",
+                            SId = "GCH12345",
+                            UniversityId = 30
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Minh",
+                            SId = "GCH12345",
+                            UniversityId = 10
                         });
                 });
 
@@ -321,7 +465,6 @@ namespace demo.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Logo")

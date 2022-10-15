@@ -3,7 +3,7 @@
 <form method="post" asp-controller="Student" asp-action="Add"> 
     <h2>Add new student</h2>
     <div class="form-group">
-        <label class="h4 text-success" asp-for="@Model.SId" ></label>
+        <label class="h4 text-success">Student ID</label>
         <input class="form-control" asp-for="@Model.SId" />
         <span class="text-danger" asp-validation-for="@Model.SId"></span>
     </div>
@@ -33,8 +33,8 @@
         <span class="text-danger" asp-validation-for="@Model.Grade"></span>
     </div>
     <div class="form-group">
-        <label class="h4 text-success" asp-for="@Model.IsGraduated"></label>
-        <input asp-for="@Model.IsGraduated" />
+        <label class="h4 text-success">Graduated</label>
+        <input class="form-check" asp-for="@Model.IsGraduated" />
         <span class="text-danger" asp-validation-for="@Model.IsGraduated"></span>
     </div>
     <div class="form-group">
@@ -44,12 +44,21 @@
     </div>
     <div class="form-group">
         <label class="h4 text-success" asp-for="@Model.Gender"></label><br />
-        <select name="Gender">
-            <option>Select a gender</option>
-            <option value='M'>Male</option>
-            <option value='F'>Female</option>
+        Male <input type="radio" name="Gender" value='M'/>
+        Female <input type="radio" name="Gender" value='F' />
+    </div>
+    @* bổ sung phần nhập thông tin cho University*@
+    <div class="form-group">       
+        <label class="h4 text-success">University Name</label>
+        <select class="list-group-item" asp-for="UniversityId">
+                <option>Select an university</option>
+            @foreach (var university in ViewBag.Universities) {
+                <option value="@university.Id">
+                    @university.Name
+                </option>
+            } 
         </select>
-        <span class="text-danger" asp-validation-for="@Model.Gender"></span>
+        <span class="text-danger" asp-validation-for="UniversityId"></span>
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-warning" value="Add" />
