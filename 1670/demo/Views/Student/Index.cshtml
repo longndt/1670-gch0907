@@ -43,10 +43,13 @@ else {
                     <a class="btn btn-warning" asp-controller="Student" asp-action="Edit" asp-route-id="@student.Id">
                         Edit
                     </a>
-                    <a class="btn btn-danger" asp-controller="Student" asp-action="Delete" asp-route-id="@student.Id"
-               onclick="return confirm('Are you sure to delete this student?');">
-                        Delete
-                    </a>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Administrator")) {
+                            <a class="btn btn-danger" asp-controller="Student" asp-action="Delete" asp-route-id="@student.Id"
+                   onclick="return confirm('Are you sure to delete this student?');">
+                                Delete
+                            </a>
+                    }
+                  
                 </td>
             </tr>
         }

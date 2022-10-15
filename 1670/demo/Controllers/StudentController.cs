@@ -29,6 +29,7 @@ namespace demo.Controllers
             return View(context.Students.ToList());
         }
 
+        [Authorize(Roles = "Administrator")]
         public IActionResult Delete(int? id)
         {
             if (id == null)

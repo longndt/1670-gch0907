@@ -54,7 +54,8 @@ namespace demo.Data
                 Id = "1",
                 UserName = "admin@fpt.com",
                 Email = "admin@fpt.com",
-                NormalizedUserName = "admin@fpt.com"
+                NormalizedUserName = "admin@fpt.com",
+                EmailConfirmed = true
             };
 
             var customer = new IdentityUser
@@ -62,7 +63,8 @@ namespace demo.Data
                 Id = "2",
                 UserName = "customer@fpt.com",
                 Email = "customer@fpt.com",
-                NormalizedUserName = "customer@fpt.com"
+                NormalizedUserName = "customer@fpt.com",
+                EmailConfirmed = true
             };
 
             //2. khai báo thư viện để mã hóa mật khẩu
