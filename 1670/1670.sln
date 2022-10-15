@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web9", "web9\web9.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web10", "web10\web10.csproj", "{FB71864D-A71A-4930-863F-28A1928F63B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo", "demo\demo.csproj", "{DC2B505B-52E3-47E4-A779-4E2247FE1397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demo", "demo\demo.csproj", "{DC2B505B-52E3-47E4-A779-4E2247FE1397}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webdemo", "..\..\1670-gch0905\webdemo\webdemo.csproj", "{4DDA0451-BA3A-489B-9BD9-E5CAF5916318}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{DC2B505B-52E3-47E4-A779-4E2247FE1397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC2B505B-52E3-47E4-A779-4E2247FE1397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC2B505B-52E3-47E4-A779-4E2247FE1397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDA0451-BA3A-489B-9BD9-E5CAF5916318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDA0451-BA3A-489B-9BD9-E5CAF5916318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDA0451-BA3A-489B-9BD9-E5CAF5916318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDA0451-BA3A-489B-9BD9-E5CAF5916318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -310,6 +310,90 @@ namespace demo.Migrations
                             Name = "Minh",
                             SId = "GCH12345",
                             UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://d2jyir0m79gs60.cloudfront.net/news/images/successful-college-student-lg.png",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Nam",
+                            SId = "GCH12345",
+                            UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "F",
+                            Grade = 7.7999999999999998,
+                            Image = "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/EDUCMS/tz7n-7vqceaq86dprdnzag.jpg",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Huong",
+                            SId = "GCH12345",
+                            UniversityId = 30
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Minh",
+                            SId = "GCH12345",
+                            UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://d2jyir0m79gs60.cloudfront.net/news/images/successful-college-student-lg.png",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Nam",
+                            SId = "GCH12345",
+                            UniversityId = 10
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "F",
+                            Grade = 7.7999999999999998,
+                            Image = "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/EDUCMS/tz7n-7vqceaq86dprdnzag.jpg",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Huong",
+                            SId = "GCH12345",
+                            UniversityId = 30
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Birthday = new DateTime(2000, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "nam@gmail.com",
+                            Gender = "M",
+                            Grade = 7.7999999999999998,
+                            Image = "https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000",
+                            IsGraduated = true,
+                            Mobile = "0912345678",
+                            Name = "Minh",
+                            SId = "GCH12345",
+                            UniversityId = 10
                         });
                 });
 
@@ -321,7 +405,6 @@ namespace demo.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Logo")

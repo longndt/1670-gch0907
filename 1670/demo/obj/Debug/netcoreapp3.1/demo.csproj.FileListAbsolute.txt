@@ -393,3 +393,4 @@ D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\University\Info.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\University\Add.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\University\Edit.cshtml.g.cs
+D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\Lis1.cshtml.g.cs

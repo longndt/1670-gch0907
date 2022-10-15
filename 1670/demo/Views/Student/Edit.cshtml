@@ -59,9 +59,10 @@
     @* bổ sung phần nhập thông tin cho University*@
     <div class="form-group">
         <label class="h4 text-success">University Name</label>
-        <select class="list-group-item" required
-                asp-for="@Model.UniversityId"
+        <select class="list-group-item"
+                asp-for="UniversityId"
                 asp-items="@(new SelectList(ViewBag.Universities,"Id","Name"))">
+                <option value="0">Select an university</option>
         </select>
     </div>
     <div class="form-group">

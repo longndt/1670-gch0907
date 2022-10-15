@@ -24,6 +24,11 @@ namespace demo.Controllers
             return View(context.Students.ToList());
         }
 
+        public IActionResult List()
+        {
+            return View(context.Students.ToList());
+        }
+
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -64,7 +69,7 @@ namespace demo.Controllers
             //lấy ra dữ liệu từ bảng University và lưu vào list
             var universities = context.Universities.ToList();
             //dữ liệu đẩy vào ViewBag để gọi đến trong View
-            ViewBag.Universities = universities;
+            ViewBag.Universities = context.Universities.ToList();
             return View();
         }
 
