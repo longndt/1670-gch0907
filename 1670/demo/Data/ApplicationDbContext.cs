@@ -1,4 +1,5 @@
 ﻿using demo.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -34,7 +35,82 @@ namespace demo.Data
 
             //add dữ liệu khởi tạo (initial data) cho bảng Student
             SeedStudent(builder);
+
+            //add dữ liệu cho bảng User
+            SeedUser(builder);
+
+            //add dữ liệu cho bảng Role
+            SeedRole(builder);
+
+            //add dữ liệu cho bảng UserRole
+            SeedUserRole(builder);
         }
+
+        private void SeedUser(ModelBuilder builder)
+        {
+            //1. tạo tài khoản ban đầu để add vào DB
+            var admin = new IdentityUser
+            {
+                Id = "1",
+                UserName = "admin@fpt.com",
+                Email = "admin@fpt.com",
+                NormalizedUserName = "admin@fpt.com"
+            };
+
+            var customer = new IdentityUser
+            {
+                Id = "2",
+                UserName = "customer@fpt.com",
+                Email = "customer@fpt.com",
+                NormalizedUserName = "customer@fpt.com"
+            };
+
+            //2. khai báo thư viện để mã hóa mật khẩu
+            var hasher = new PasswordHasher<IdentityUser>();
+
+            //3. thiết lập và mã hóa mật khẩu   từng tài khoản
+            admin.PasswordHash = hasher.HashPassword(admin, "123456");
+            customer.PasswordHash = hasher.HashPassword(customer, "123456");
+        }
+
+        private void SeedRole(ModelBuilder builder)
+        {
+            //1. tạo các role cho hệ thống
+            var admin = new IdentityRole
+            {
+                Id = "A",
+                Name = "Administrator",
+                NormalizedName = "Administrator"
+            };
+            var customer = new IdentityRole
+            {
+                Id = "B",
+                Name = "Customer",
+                NormalizedName = "Customer"
+            };
+
+            //2. add role vào trong DB
+            builder.Entity<IdentityRole>().HasData(admin, customer);
+              
+        }
+
+        private void SeedUserRole(ModelBuilder builder)
+        {
+            builder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string> 
+                { 
+                    UserId = "1", 
+                    RoleId = "A"
+                },
+                new IdentityUserRole<string>
+                {
+                    UserId = "2",
+                    RoleId = "B"
+                }
+             );
+        }
+
+   
 
         private void PopulateUniversity(ModelBuilder builder)
         {
