@@ -51,13 +51,14 @@
     <div class="form-group">       
         <label class="h4 text-success">University Name</label>
         <select class="list-group-item" asp-for="UniversityId">
-                <option value="0">Select an university</option>
+                <option>Select an university</option>
             @foreach (var university in ViewBag.Universities) {
                 <option value="@university.Id">
                     @university.Name
                 </option>
             } 
         </select>
+        <span class="text-danger" asp-validation-for="UniversityId"></span>
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-warning" value="Add" />

@@ -70,7 +70,7 @@ namespace demo.Controllers
             //lấy ra dữ liệu từ bảng University và lưu vào list
             var universities = context.Universities.ToList();
             //dữ liệu đẩy vào ViewBag để gọi đến trong View
-            ViewBag.Universities = context.Universities.ToList();
+            ViewBag.Universities = universities;
             return View();
         }
 
@@ -86,6 +86,7 @@ namespace demo.Controllers
             }
             else
             {
+                ViewBag.Universities = context.Universities.ToList();
                 return View(student);
             }
         }
@@ -112,6 +113,7 @@ namespace demo.Controllers
             }
             else
             {
+                ViewBag.Universities = context.Universities.ToList();
                 return View(student);
             }
         }
