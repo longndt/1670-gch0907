@@ -71,6 +71,9 @@ namespace demo.Data
             //3. thiết lập và mã hóa mật khẩu   từng tài khoản
             admin.PasswordHash = hasher.HashPassword(admin, "123456");
             customer.PasswordHash = hasher.HashPassword(customer, "123456");
+
+            //4. add tài khoản vào db
+            builder.Entity<IdentityUser>().HasData(admin, customer);
         }
 
         private void SeedRole(ModelBuilder builder)
@@ -109,8 +112,6 @@ namespace demo.Data
                 }
              );
         }
-
-   
 
         private void PopulateUniversity(ModelBuilder builder)
         {

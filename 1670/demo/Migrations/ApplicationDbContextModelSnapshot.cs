@@ -44,6 +44,22 @@ namespace demo.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "A",
+                            ConcurrencyStamp = "b7442286-6e2b-4f46-928a-5630646b43dd",
+                            Name = "Administrator",
+                            NormalizedName = "Administrator"
+                        },
+                        new
+                        {
+                            Id = "B",
+                            ConcurrencyStamp = "c475bf5e-5ce0-4b70-940a-e24631447766",
+                            Name = "Customer",
+                            NormalizedName = "Customer"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -133,6 +149,38 @@ namespace demo.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "4e7b6d79-e655-4a04-ad54-d5bf719e13fe",
+                            Email = "admin@fpt.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "admin@fpt.com",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPqTE7h4u9wKwLep8KAZWXbENvh0t8XvUFqo4cIZrFr4PMYPGQSMIPHgiIbVmTPesg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "60386271-fe2b-4e39-8afb-269ec5608bcd",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@fpt.com"
+                        },
+                        new
+                        {
+                            Id = "2",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b8a19c8e-a212-406e-b6c1-c937b77fb973",
+                            Email = "customer@fpt.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "customer@fpt.com",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOD5SnV4PysD6xJOaQPxfJw1qoi7muesUZqsH7bAdzsKJOA4FRFGvjSo5+kcruHFog==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "254b6229-ed2c-4bac-a4f9-6a276e82c7ce",
+                            TwoFactorEnabled = false,
+                            UserName = "customer@fpt.com"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -196,6 +244,18 @@ namespace demo.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "1",
+                            RoleId = "A"
+                        },
+                        new
+                        {
+                            UserId = "2",
+                            RoleId = "B"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
