@@ -3,6 +3,7 @@ using demo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Net.Mime;
 
 namespace demo.Controllers
 {
@@ -35,6 +36,14 @@ namespace demo.Controllers
             //còn nếu chỉ truy xuất thông tin id đơn thuần thì sử dụng
             //Find hoặc FirstOrDefault đều được
             return View(university);
+        }
+
+        public IActionResult Remove (int id)
+        {
+            var university = context.Universities.Find(id);
+            context.Universities.Remove(university);
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

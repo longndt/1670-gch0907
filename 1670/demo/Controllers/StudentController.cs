@@ -61,6 +61,10 @@ namespace demo.Controllers
         [HttpGet]
         public IActionResult Add ()
         {
+            //lấy ra dữ liệu từ bảng University và lưu vào list
+            var universities = context.Universities.ToList();
+            //dữ liệu đẩy vào ViewBag để gọi đến trong View
+            ViewBag.Universities = universities;
             return View();
         }
 
@@ -83,6 +87,10 @@ namespace demo.Controllers
         [HttpGet]
         public IActionResult Edit (int id)
         {
+            //lấy ra dữ liệu từ bảng University và lưu vào list
+            var universities = context.Universities.ToList();
+            //dữ liệu đẩy vào ViewBag để gọi đến trong View
+            ViewBag.Universities = universities;
             return View(context.Students.Find(id));
         }
 
