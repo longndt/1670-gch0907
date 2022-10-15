@@ -9,9 +9,9 @@ namespace demo.Models
         public int Id { get; set; } //Primary key
 
         [Required]
+        [Display(Name = "University Name")]
         public string Name { get; set; }
 
-        [Required]
         public string Address { get; set; }
 
         [Required]
@@ -19,6 +19,5 @@ namespace demo.Models
 
         //khai báo ICollection để kết nối đến Student từ University
         public ICollection<Student> Students { get; set; }
-
     }
 }

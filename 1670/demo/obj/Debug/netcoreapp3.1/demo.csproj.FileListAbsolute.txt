@@ -371,8 +371,6 @@ D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\demo.TagHel
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\demo.TagHelpers.output.cache
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\demo.RazorCoreGenerate.cache
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -388,7 +386,6 @@ D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\demo.pdb
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\demo.genruntimeconfig.cache
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\List.cshtml.g.cs
-D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Home\SayHello.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\Detail.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\Add.cshtml.g.cs
 D:\workspace\FGW-1670\1670-gch0907\1670\demo\obj\Debug\netcoreapp3.1\Razor\Views\Student\Edit.cshtml.g.cs
