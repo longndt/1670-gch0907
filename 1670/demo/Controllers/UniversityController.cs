@@ -60,5 +60,30 @@ namespace demo.Controllers
             //nếu không hợp lệ thì quay ngược về form 
             return View(university);
         }
+
+        [HttpGet]
+        public IActionResult Edit (int id)
+        {
+            var university = context.Universities.Find(id);
+            return View(university);
+        }
+
+        [HttpPost]
+        public IActionResult Edit (University university)
+        {
+            //kiểm tra thông tin nhập vào từ form
+            if (ModelState.IsValid)
+            {
+                //nếu hợp lệ thì cập nhật vào db
+                context.Universities.Update(university);
+                //lưu thay đổi vào db
+                context.SaveChanges();
+                //return về trang index
+                return RedirectToAction("Index");
+                //return RedirectToAction(nameof(Index));
+            }
+            //nếu không hợp lệ thì quay ngược về form 
+            return View(university);
+        }
     }
 }
