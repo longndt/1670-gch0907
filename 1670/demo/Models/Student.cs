@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace demo.Models
 {
+    //relationship: Student - University : Many - One
     public class Student
     {
         //primary key + auto increment
@@ -43,5 +44,13 @@ namespace demo.Models
         [Required]
         [Display(Name = "Avatar")]
         public string Image { get; set; }
+
+        //Foreign Key (kết nối đến cột Id - PK của bảng University)
+        //Note: chỉ sử dụng để kết nối 2 bảng trong DB
+        public int UniversityId { get; set; }
+
+        //tạo object để sử dụng trong code
+        //Note: có thể truy vấn dữ liệu của University từ Student
+        public University University { get; set; }
     }
 }

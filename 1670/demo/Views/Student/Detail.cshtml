@@ -25,6 +25,14 @@
                  <th>Grade</th>
                  <td>@Model.Grade</td>
              </tr>
+            <tr>
+                <th>University</th>
+                <td>
+                    <a asp-controller="University" asp-action="Info" 
+                        asp-route-id="@Model.University.Id"> @Model.University.Name
+                    </a>
+                </td>
+            </tr>
          </table>
     </div>
 </div>
