@@ -77,6 +77,8 @@ namespace demo.Controllers
         [HttpPost]
         public IActionResult Add(Student student)
         {
+            //nếu người dùng nhập đủ và đúng thông tin vào form
+            //thì dữ liệu sẽ được add vào database
             if (ModelState.IsValid)
             {
                 context.Students.Add(student);
@@ -84,7 +86,9 @@ namespace demo.Controllers
                 TempData["Message"] = "Add student successfully !";
                 return RedirectToAction("index");
             }
-            else
+            else  
+            //ngược lại nếu người dùng nhập sai thì quay ngược trở lại form để add
+            //Lưu ý: cần tạo và giá trị cho biến ViewBag => tránh bị lỗi object null
             {
                 ViewBag.Universities = context.Universities.ToList();
                 return View(student);
