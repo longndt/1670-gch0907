@@ -18,7 +18,11 @@ namespace demo.Controllers
 
         public IActionResult Index()
         {
-            var universities = context.Universities.ToList();
+            //trả về list theo thứ tự ID tăng dần (cũ ở đầu, mới ở cuối danh sách)
+            //var universities = context.Universities.ToList();
+
+            //trả về list theo ID giảm dần (cái mới sẽ được hiển thị ở đầu thay vì cuối)
+            var universities = context.Universities.OrderByDescending(university => university.Id).ToList();
             return View(universities);
         }
 

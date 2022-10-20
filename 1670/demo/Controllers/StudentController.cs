@@ -121,5 +121,26 @@ namespace demo.Controllers
                 return View(student);
             }
         }
+
+        public IActionResult SortNameAsc ()
+        {
+            return View("Index",context.Students.OrderBy(s => s.Name).ToList());
+        }
+
+        public IActionResult SortNameDesc ()
+        {
+            return View("Index",context.Students.OrderByDescending(s => s.Name).ToList());
+        }
+
+        [HttpPost]
+        public IActionResult Search (string keyword)
+        {
+            var students = context.Students.Where(s => s.Name.Contains(keyword)).ToList();
+            if (students.Count == 0)
+            {
+                TempData["Message"] = "No student found";
+            }
+            return View("Index", students);
+        }
     }
 }
